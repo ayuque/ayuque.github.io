@@ -1,4 +1,4 @@
-# Magaly Cusipuma Ayuque - Professional Resume
+# Magaly Cusipuma Ayuque
 
 Welcome to the GitHub repository for my professional resume hosted on GitHub Pages. This site showcases my work experience, education, skills, and projects in a web format.
 
