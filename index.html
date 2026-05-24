@@ -1,38 +1,1969 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Magaly Cusipuma Ayuque - Resume</title>
-<link rel="stylesheet" href="styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Magaly Cusipuma Ayuque | Hydraulic Engineering, CFD & Sediment Transport</title>
+  <meta name="description" content="Portfolio profesional trilingüe de Magaly Cusipuma Ayuque: ingeniería hidráulica, mecánica de fluidos ambiental, CFD, transporte de sedimentos, GIS y análisis de datos." />
+  <meta name="author" content="Magaly Cusipuma Ayuque" />
+  <meta name="theme-color" content="#07111f" />
+  <meta property="og:title" content="Magaly Cusipuma Ayuque | Hydraulic & Environmental Fluid Mechanics Engineer" />
+  <meta property="og:description" content="Hydraulic modeling, CFD, sediment transport, GIS, reservoir management and data analysis." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/magaly-cusipuma-headshot.png" />
+  <link rel="icon" href="assets/magaly-cusipuma-headshot.png" />
+  <style>
+    :root {
+      --bg: #06111f;
+      --bg-2: #0a1528;
+      --surface: rgba(255, 255, 255, 0.078);
+      --surface-2: rgba(255, 255, 255, 0.12);
+      --surface-3: rgba(255, 255, 255, 0.18);
+      --text: #eef6ff;
+      --muted: #aebbd0;
+      --muted-2: #7f8ba0;
+      --line: rgba(255, 255, 255, 0.13);
+      --accent: #4fd8ff;
+      --accent-2: #70f0bd;
+      --accent-3: #a98bff;
+      --warning: #ffd166;
+      --shadow: 0 28px 82px rgba(0, 0, 0, 0.34);
+      --shadow-soft: 0 18px 44px rgba(0, 0, 0, 0.18);
+      --radius-xl: 34px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --radius-sm: 13px;
+      --max: 1200px;
+      --nav-h: 76px;
+      --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    body.light {
+      --bg: #f4f8ff;
+      --bg-2: #eaf2fb;
+      --surface: rgba(255, 255, 255, 0.74);
+      --surface-2: rgba(255, 255, 255, 0.96);
+      --surface-3: rgba(255, 255, 255, 0.98);
+      --text: #102033;
+      --muted: #45546a;
+      --muted-2: #66748a;
+      --line: rgba(18, 36, 56, 0.13);
+      --shadow: 0 28px 82px rgba(31, 59, 95, 0.15);
+      --shadow-soft: 0 18px 44px rgba(31, 59, 95, 0.10);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--nav-h) + 22px);
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: var(--font);
+      color: var(--text);
+      line-height: 1.6;
+      background:
+        radial-gradient(circle at 8% 2%, rgba(79, 216, 255, 0.23), transparent 34rem),
+        radial-gradient(circle at 86% 8%, rgba(112, 240, 189, 0.16), transparent 31rem),
+        radial-gradient(circle at 67% 52%, rgba(169, 139, 255, 0.13), transparent 29rem),
+        linear-gradient(145deg, var(--bg) 0%, var(--bg-2) 100%);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+      background-size: 62px 62px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.82), transparent 74%);
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: auto 0 0 0;
+      height: 36vh;
+      z-index: -1;
+      pointer-events: none;
+      background: linear-gradient(to top, rgba(6, 17, 31, 0.8), transparent);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button { font: inherit; }
+    p, h1, h2, h3 { margin-top: 0; }
+
+    .skip-link {
+      position: absolute;
+      top: -70px;
+      left: 18px;
+      z-index: 100;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #06111f;
+      font-weight: 900;
+      transition: top .18s ease;
+    }
+
+    .skip-link:focus { top: 14px; }
+
+    .wrap {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      padding: 0 22px;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      height: var(--nav-h);
+      z-index: 80;
+      border-bottom: 1px solid var(--line);
+      background: color-mix(in srgb, var(--bg) 76%, transparent);
+      backdrop-filter: blur(22px);
+    }
+
+    .nav__inner {
+      width: min(100%, var(--max));
+      height: 100%;
+      margin: 0 auto;
+      padding: 0 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-width: max-content;
+      font-weight: 950;
+      letter-spacing: -0.04em;
+    }
+
+    .brand__mark {
+      width: 43px;
+      height: 43px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      color: #06111f;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 16px 34px rgba(79, 216, 255, 0.24);
+    }
+
+    .brand__text span {
+      display: block;
+      margin-top: -5px;
+      color: var(--muted);
+      font-size: .74rem;
+      font-weight: 760;
+      letter-spacing: .025em;
+    }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      margin-left: auto;
+    }
+
+    .nav__links a {
+      padding: 9px 12px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: .91rem;
+      font-weight: 820;
+      transition: transform .2s ease, background .2s ease, color .2s ease;
+      white-space: nowrap;
+    }
+
+    .nav__links a:hover,
+    .nav__links a.is-active {
+      color: var(--text);
+      background: var(--surface);
+      transform: translateY(-1px);
+    }
+
+    .nav__actions {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .icon-btn,
+    .lang-btn,
+    .menu-btn,
+    .filter-btn {
+      min-height: 40px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+      font-weight: 880;
+      transition: transform .2s ease, background .2s ease, border-color .2s ease;
+    }
+
+    .icon-btn { width: 42px; }
+    .lang-btn { padding: 0 11px; font-size: .86rem; }
+    .menu-btn { display: none; padding: 0 13px; }
+    .filter-btn { padding: 0 14px; color: var(--muted); }
+
+    .lang-btn.is-active,
+    .filter-btn.is-active {
+      color: #06111f;
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 13px 28px rgba(79, 216, 255, 0.16);
+    }
+
+    .icon-btn:hover,
+    .lang-btn:hover,
+    .menu-btn:hover,
+    .filter-btn:hover {
+      transform: translateY(-1px);
+      background: var(--surface-2);
+    }
+
+    .hero { padding: 78px 0 48px; }
+
+    .hero__grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, .64fr);
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    .glass,
+    .hero__content,
+    .profile-card,
+    .section-panel,
+    .card,
+    .timeline-item,
+    .cta {
+      border: 1px solid var(--line);
+      background: linear-gradient(160deg, var(--surface-2), var(--surface));
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .hero__content {
+      position: relative;
+      overflow: hidden;
+      min-height: 645px;
+      padding: clamp(28px, 5.5vw, 58px);
+      border-radius: var(--radius-xl);
+    }
+
+    .hero__content::after {
+      content: "";
+      position: absolute;
+      right: -150px;
+      top: -140px;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(79,216,255,.30), transparent 66%);
+      filter: blur(4px);
+    }
+
+    .hero__content > * { position: relative; z-index: 1; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 7px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(79, 216, 255, 0.08);
+      color: var(--accent);
+      font-size: .81rem;
+      font-weight: 920;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent-2);
+      box-shadow: 0 0 0 6px rgba(112,240,189,.14);
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 24px 0 20px;
+      font-size: clamp(3.05rem, 8vw, 6.9rem);
+      line-height: .88;
+      letter-spacing: -0.087em;
+      font-weight: 950;
+    }
+
+    .gradient-text {
+      color: transparent;
+      background: linear-gradient(135deg, var(--text), var(--accent), var(--accent-2));
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+
+    .lead {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: clamp(1.04rem, 1.45vw, 1.28rem);
+    }
+
+    .lead strong { color: var(--text); font-weight: 920; }
+
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 30px 0 34px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 50px;
+      padding: 0 18px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn--primary {
+      color: #06111f;
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 18px 36px rgba(79, 216, 255, .20);
+    }
+
+    .btn--ghost { background: var(--surface); color: var(--text); }
+
+    .hero__stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 42px;
+    }
+
+    .stat {
+      min-height: 124px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: rgba(255,255,255,.045);
+    }
+
+    .stat b {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.03rem;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .stat span {
+      display: block;
+      color: var(--muted);
+      font-size: .9rem;
+      line-height: 1.45;
+    }
+
+    .profile-card {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      padding: 28px;
+      border-radius: var(--radius-xl);
+    }
+
+    .profile-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(135deg, rgba(79,216,255,.18), transparent 36%),
+        radial-gradient(circle at 100% 0%, rgba(112,240,189,.19), transparent 28%);
+    }
+
+    .profile-card > * { position: relative; z-index: 1; }
+
+    .portrait-wrap { display: grid; place-items: center; padding: 8px 0 2px; }
+
+    .portrait {
+      width: min(270px, 74vw);
+      aspect-ratio: 1;
+      padding: 7px;
+      border-radius: 38px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2), var(--accent-3));
+      box-shadow: 0 24px 56px rgba(0,0,0,.25);
+      transform: rotate(-2deg);
+    }
+
+    .portrait img {
+      width: 100%;
+      height: 100%;
+      border-radius: 31px;
+      object-fit: cover;
+      background: #fff;
+      transform: rotate(2deg);
+    }
+
+    .profile-card h2 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      line-height: .98;
+      letter-spacing: -0.062em;
+    }
+
+    .role {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .profile-mini {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .mini-chip {
+      min-height: 72px;
+      padding: 13px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255,255,255,.045);
+    }
+
+    .mini-chip strong {
+      display: block;
+      font-size: .78rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .mini-chip span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-weight: 760;
+      line-height: 1.25;
+    }
+
+    .contact-list { display: grid; gap: 10px; margin-top: auto; }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 44px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: rgba(255,255,255,.045);
+      color: var(--muted);
+      font-weight: 760;
+      overflow-wrap: anywhere;
+      transition: transform .2s ease, color .2s ease, background .2s ease;
+    }
+
+    .contact-item:hover {
+      color: var(--text);
+      background: var(--surface-2);
+      transform: translateY(-1px);
+    }
+
+    .contact-item svg { flex: 0 0 18px; color: var(--accent); }
+
+    section { padding: 60px 0; }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, .90fr) minmax(280px, .48fr);
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 24px;
+    }
+
+    .section-kicker {
+      margin-bottom: 12px;
+      color: var(--accent);
+      font-size: .78rem;
+      font-weight: 930;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    h2.section-title {
+      margin: 0;
+      font-size: clamp(2.05rem, 5vw, 4.35rem);
+      line-height: .95;
+      letter-spacing: -0.068em;
+      font-weight: 950;
+    }
+
+    .section-copy { margin: 0; color: var(--muted); font-size: 1.02rem; }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      border-radius: var(--radius-lg);
+      padding: 22px;
+      transition: transform .25s ease, border-color .25s ease, background .25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: color-mix(in srgb, var(--accent) 46%, var(--line));
+    }
+
+    .card__icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      border-radius: 17px;
+      background: rgba(79,216,255,.12);
+      color: var(--accent);
+      font-weight: 950;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      line-height: 1.13;
+      letter-spacing: -0.035em;
+    }
+
+    .card p { margin-bottom: 0; color: var(--muted); }
+
+    .card ul {
+      margin: 14px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .card li + li { margin-top: 7px; }
+
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin: -6px 0 20px;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .work-card {
+      min-height: 410px;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .work-card__top {
+      padding: 22px 22px 17px;
+      border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 12% 0%, rgba(79,216,255,.13), transparent 38%),
+        radial-gradient(circle at 95% 12%, rgba(112,240,189,.12), transparent 34%);
+    }
+
+    .work-card__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .badge,
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,.055);
+      color: var(--muted);
+      font-size: .78rem;
+      font-weight: 860;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .badge { padding: 8px 10px; }
+    .tag { padding: 7px 9px; }
+    .badge--accent { color: #06111f; background: linear-gradient(135deg, var(--accent), var(--accent-2)); border-color: transparent; }
+    .badge--future { color: #06111f; background: linear-gradient(135deg, var(--warning), var(--accent-2)); border-color: transparent; }
+
+    .work-card h3 {
+      margin-bottom: 8px;
+      font-size: clamp(1.45rem, 2.7vw, 2rem);
+      line-height: 1.03;
+      letter-spacing: -0.055em;
+    }
+
+    .work-card__org { color: var(--accent); font-weight: 890; }
+    .work-card__body { padding: 20px 22px 22px; display: grid; gap: 14px; }
+
+    .work-card__body p { margin: 0; color: var(--muted); }
+
+    .label {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--text);
+      font-size: .78rem;
+      font-weight: 930;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .tag-row { display: flex; flex-wrap: wrap; gap: 7px; }
+
+    .publication-layout {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(320px, .55fr);
+      gap: 16px;
+      align-items: start;
+    }
+
+    .pub-list { display: grid; gap: 14px; }
+
+    .pub-card {
+      display: grid;
+      gap: 12px;
+      padding: 22px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--line);
+      background: linear-gradient(160deg, var(--surface-2), var(--surface));
+      box-shadow: var(--shadow-soft);
+    }
+
+    .pub-card h3 {
+      margin: 0;
+      font-size: 1.26rem;
+      line-height: 1.15;
+      letter-spacing: -0.035em;
+    }
+
+    .pub-card p { margin: 0; color: var(--muted); }
+    .pub-card em { color: var(--text); font-style: italic; }
+
+    .editor-note {
+      padding: 22px;
+      border: 1px dashed color-mix(in srgb, var(--accent) 40%, var(--line));
+      border-radius: var(--radius-lg);
+      background: rgba(79, 216, 255, .065);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .editor-note h3 {
+      margin-bottom: 10px;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    .editor-note p { margin-bottom: 0; color: var(--muted); }
+
+    .future-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .future-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 320px;
+    }
+
+    .future-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -20% -40% -20%;
+      height: 130px;
+      background: radial-gradient(circle, rgba(112,240,189,.13), transparent 65%);
+      pointer-events: none;
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 14px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 23px;
+      top: 18px;
+      bottom: 18px;
+      width: 1px;
+      background: var(--line);
+    }
+
+    .timeline-item {
+      position: relative;
+      display: grid;
+      grid-template-columns: 48px minmax(0, 1fr);
+      gap: 16px;
+      padding: 18px;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .timeline-dot {
+      position: relative;
+      z-index: 1;
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      color: #06111f;
+      font-weight: 950;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    }
+
+    .timeline-content h3 {
+      margin-bottom: 4px;
+      font-size: 1.15rem;
+      line-height: 1.14;
+      letter-spacing: -0.03em;
+    }
+
+    .timeline-content .company { color: var(--accent); font-weight: 880; margin-bottom: 6px; }
+    .timeline-content .meta { color: var(--muted-2); font-size: .92rem; font-weight: 780; margin-bottom: 10px; }
+    .timeline-content p { color: var(--muted); margin-bottom: 0; }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .education-list,
+    .course-list,
+    .achievement-list { display: grid; gap: 12px; }
+
+    .compact-card {
+      padding: 18px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.052);
+    }
+
+    .compact-card h3 { margin-bottom: 5px; letter-spacing: -0.03em; }
+    .compact-card p { margin-bottom: 0; color: var(--muted); }
+    .compact-card .meta { margin-top: 7px; color: var(--muted-2); font-size: .9rem; font-weight: 780; }
+
+    .skill-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .language-list { display: grid; gap: 11px; margin-top: 16px; }
+
+    .language {
+      display: grid;
+      grid-template-columns: 88px minmax(0, 1fr) 52px;
+      gap: 11px;
+      align-items: center;
+      color: var(--muted);
+      font-weight: 820;
+    }
+
+    .meter {
+      height: 9px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: rgba(255,255,255,.11);
+    }
+
+    .meter span {
+      display: block;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    }
+
+    .cta {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 22px;
+      align-items: center;
+      padding: clamp(26px, 4vw, 42px);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .cta::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(79,216,255,.18), transparent 30%),
+        radial-gradient(circle at 100% 100%, rgba(112,240,189,.16), transparent 32%);
+      pointer-events: none;
+    }
+
+    .cta > * { position: relative; z-index: 1; }
+
+    .cta h2 {
+      max-width: 760px;
+      margin-bottom: 12px;
+      font-size: clamp(2.05rem, 5vw, 4.1rem);
+      line-height: .95;
+      letter-spacing: -0.067em;
+    }
+
+    .cta p { max-width: 760px; margin-bottom: 0; color: var(--muted); }
+
+    footer {
+      padding: 34px 0 42px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-weight: 750;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 1080px) {
+      .nav__links {
+        position: fixed;
+        top: calc(var(--nav-h) + 10px);
+        left: 16px;
+        right: 16px;
+        display: none;
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        background: color-mix(in srgb, var(--bg) 90%, transparent);
+        backdrop-filter: blur(22px);
+        box-shadow: var(--shadow);
+      }
+      .nav__links.is-open { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .nav__links a { text-align: center; }
+      .menu-btn { display: inline-flex; align-items: center; justify-content: center; }
+      .hero__grid, .publication-layout { grid-template-columns: 1fr; }
+      .profile-card { min-height: auto; }
+      .grid-4, .future-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 820px) {
+      .section-head, .two-col, .cta { grid-template-columns: 1fr; }
+      .cta .hero__actions { margin: 0; }
+      .work-grid, .grid-3, .grid-2 { grid-template-columns: 1fr; }
+      .hero__stats { grid-template-columns: 1fr; }
+      .hero__content { min-height: auto; }
+      .brand__text { display: none; }
+    }
+
+    @media (max-width: 560px) {
+      .wrap, .nav__inner { padding-left: 16px; padding-right: 16px; }
+      .hero { padding-top: 42px; }
+      section { padding: 44px 0; }
+      .grid-4, .future-grid { grid-template-columns: 1fr; }
+      .nav__links.is-open { grid-template-columns: 1fr; }
+      .profile-mini { grid-template-columns: 1fr; }
+      .language { grid-template-columns: 78px minmax(0, 1fr); }
+      .language strong:last-child { display: none; }
+      .lang-btn { padding: 0 9px; }
+      h1 { font-size: clamp(2.8rem, 18vw, 4.4rem); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; animation: none !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Magaly Cusipuma Ayuque",
+      "jobTitle": "Hydraulic and Environmental Fluid Mechanics Engineer",
+      "email": "mailto:ayuquemagaly@gmail.com",
+      "image": "assets/magaly-cusipuma-headshot.png",
+      "sameAs": [
+        "https://www.linkedin.com/in/ayuquemagaly",
+        "https://github.com/ayuque"
+      ],
+      "knowsAbout": [
+        "Computational Hydraulics",
+        "Environmental Fluid Mechanics",
+        "Sediment Transport",
+        "CFD",
+        "GIS",
+        "Reservoir Management",
+        "Coastal Morphodynamics",
+        "Data Analysis"
+      ]
+    }
+  </script>
 </head>
 <body>
-<div class="container">
-    <header>
-        <img src="your_photo.jpg" alt="Magaly Cusipuma Ayuque">
-        <h1>Magaly Cusipuma Ayuque</h1>
-        <p>Engineer | Researcher | GIS Specialist</p>
-        <div>
-            <a href="https://linkedin.com/in/ayuquemagaly">LinkedIn</a> |
-            <a href="https://github.com/ayuque">GitHub</a> |
-            <a href="mailto:ayuquemagaly@gmail.com">Email</a>
+  <a class="skip-link" href="#main" data-i18n="skip">Saltar al contenido</a>
+
+  <header class="nav" data-i18n-aria="nav.aria">
+    <div class="nav__inner">
+      <a class="brand" href="#top" aria-label="Magaly Cusipuma Ayuque">
+        <span class="brand__mark">MC</span>
+        <span class="brand__text">Magaly Cusipuma <span data-i18n="brand.subtitle">Hidráulica computacional + datos</span></span>
+      </a>
+
+      <nav class="nav__links" id="site-menu" data-i18n-aria="nav.menuAria">
+        <a href="#expertise" data-i18n="nav.expertise">Especialidad</a>
+        <a href="#work" data-i18n="nav.work">Trabajos</a>
+        <a href="#publications" data-i18n="nav.publications">Publicaciones</a>
+        <a href="#future" data-i18n="nav.future">Futuro</a>
+        <a href="#career" data-i18n="nav.career">Trayectoria</a>
+        <a href="#contact" data-i18n="nav.contact">Contacto</a>
+      </nav>
+
+      <div class="nav__actions" data-i18n-aria="nav.actionsAria">
+        <button class="lang-btn is-active" type="button" data-set-lang="es" aria-label="Ver en español">ES</button>
+        <button class="lang-btn" type="button" data-set-lang="en" aria-label="View in English">EN</button>
+        <button class="lang-btn" type="button" data-set-lang="fr" aria-label="Voir en français">FR</button>
+        <button class="icon-btn" type="button" id="theme-toggle" data-i18n-aria="nav.themeAria">◐</button>
+        <button class="menu-btn" type="button" id="menu-toggle" aria-controls="site-menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero__grid">
+        <div class="hero__content reveal">
+          <span class="eyebrow" data-i18n="hero.eyebrow">Mecánica de fluidos ambiental</span>
+          <h1><span data-i18n="hero.titleA">Modelación hidráulica con visión de</span> <span class="gradient-text" data-i18n="hero.titleB">impacto.</span></h1>
+          <p class="lead" data-i18n="hero.lead">Soy <strong>Magaly Cusipuma Ayuque</strong>, ingeniera especializada en hidráulica computacional, transporte de sedimentos, CFD, GIS y análisis de datos para sistemas fluviales, costeros, presas y reservorios.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="mailto:ayuquemagaly@gmail.com" data-i18n="hero.email">Contactar por email</a>
+            <a class="btn btn--ghost" href="assets/Magaly_Cusipuma_Ayuque_CV.pdf" download data-i18n="hero.cv">Descargar CV</a>
+            <a class="btn btn--ghost" href="https://github.com/ayuque" target="_blank" rel="noreferrer" data-i18n="hero.github">Ver GitHub</a>
+          </div>
+
+          <div class="hero__stats" aria-label="Resumen profesional">
+            <div class="stat">
+              <b data-i18n="hero.stat1.title">Hidrodinámica + sedimentos</b>
+              <span data-i18n="hero.stat1.body">Estudios de transporte, erosión, deposición y morfodinámica en ríos, playas y reservorios.</span>
+            </div>
+            <div class="stat">
+              <b data-i18n="hero.stat2.title">CFD, modelos y datos</b>
+              <span data-i18n="hero.stat2.body">Validación con mediciones, análisis de sensibilidad, calibración y generación de mallas computacionales.</span>
+            </div>
+            <div class="stat">
+              <b data-i18n="hero.stat3.title">Experiencia internacional</b>
+              <span data-i18n="hero.stat3.body">Trayectoria académica y profesional en Francia, Perú y Países Bajos.</span>
+            </div>
+          </div>
         </div>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#languages">Languages</a></li>
-        </ul>
-    </nav>
-    <section id="experience">...</section>
-    <section id="education">...</section>
-    <section id="publications">...</section>
-    <section id="skills">...</section>
-    <section id="languages">...</section>
-</div>
-<script src="script.js"></script>
+
+        <aside class="profile-card reveal" data-i18n-aria="profile.aria">
+          <div class="portrait-wrap">
+            <div class="portrait">
+              <img src="assets/magaly-cusipuma-headshot.png" alt="Foto profesional de Magaly Cusipuma Ayuque" />
+            </div>
+          </div>
+          <div>
+            <h2>Magaly Cusipuma Ayuque</h2>
+            <p class="role" data-i18n="profile.role">Ingeniera en Mecánica de Fluidos | Hidráulica computacional | CFD | Sedimentos</p>
+          </div>
+          <div class="profile-mini">
+            <div class="mini-chip"><strong data-i18n="profile.baseLabel">Base</strong><span data-i18n="profile.base">Francia · Perú</span></div>
+            <div class="mini-chip"><strong data-i18n="profile.focusLabel">Foco</strong><span data-i18n="profile.focus">Agua, sedimentos y datos</span></div>
+            <div class="mini-chip"><strong data-i18n="profile.languagesLabel">Idiomas</strong><span data-i18n="profile.languages">ES · EN · FR</span></div>
+            <div class="mini-chip"><strong data-i18n="profile.modeLabel">Perfil</strong><span data-i18n="profile.mode">Ingeniería + investigación</span></div>
+          </div>
+          <div class="contact-list">
+            <a class="contact-item" href="mailto:ayuquemagaly@gmail.com" aria-label="Enviar correo a Magaly">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm-.4 4.25-7.07 5.3a.88.88 0 0 1-1.06 0L4.4 8.25V6.5l7.6 5.7 7.6-5.7v1.75Z"/></svg>
+              ayuquemagaly@gmail.com
+            </a>
+            <a class="contact-item" href="https://www.linkedin.com/in/ayuquemagaly" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.58c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.68H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.02H3.56V9h3.56v11.45ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0Z"/></svg>
+              linkedin.com/in/ayuquemagaly
+            </a>
+            <a class="contact-item" href="https://github.com/ayuque" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.02c-3.2.7-3.87-1.37-3.87-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.76.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.2-3.08-.12-.29-.52-1.46.11-3.04 0 0 .98-.31 3.2 1.18.93-.26 1.93-.39 2.92-.39s1.99.13 2.92.39c2.22-1.5 3.19-1.18 3.19-1.18.64 1.58.24 2.75.12 3.04.75.8 1.19 1.83 1.19 3.08 0 4.42-2.69 5.38-5.25 5.67.42.36.8 1.08.8 2.18v3.23c0 .31.2.67.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+              github.com/ayuque
+            </a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="expertise">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <p class="section-kicker" data-i18n="expertise.kicker">Especialidad</p>
+            <h2 class="section-title" data-i18n="expertise.title">Ingeniería para entender y anticipar el comportamiento del agua.</h2>
+          </div>
+          <p class="section-copy" data-i18n="expertise.copy">Mi trabajo conecta modelación física y numérica con análisis de datos, GIS y herramientas CFD para tomar decisiones técnicas más sólidas en hidráulica, costas, ríos y gestión de reservorios.</p>
+        </div>
+        <div class="grid-4" id="expertise-grid"></div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <p class="section-kicker" data-i18n="work.kicker">Trabajos realizados</p>
+            <h2 class="section-title" data-i18n="work.title">Proyectos que convierten mediciones, modelos y mapas en decisiones.</h2>
+          </div>
+          <p class="section-copy" data-i18n="work.copy">Una selección de trabajos profesionales, investigaciones y experiencias de campo. La sección está preparada para seguir agregando nuevos casos, resultados, enlaces, imágenes o repositorios.</p>
+        </div>
+        <div class="filter-bar reveal" id="work-filters"></div>
+        <div class="work-grid" id="work-grid"></div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <p class="section-kicker" data-i18n="publications.kicker">Publicaciones</p>
+            <h2 class="section-title" data-i18n="publications.title">Producción académica y espacio para nuevas publicaciones.</h2>
+          </div>
+          <p class="section-copy" data-i18n="publications.copy">Incluye publicaciones ya existentes y bloques listos para manuscritos, conferencias, notas técnicas, DOI, datasets o repositorios futuros.</p>
+        </div>
+        <div class="publication-layout">
+          <div class="pub-list" id="publication-list"></div>
+          <aside class="editor-note reveal">
+            <span class="badge badge--accent" data-i18n="publications.moduleBadge">Módulo editable</span>
+            <h3 data-i18n="publications.moduleTitle">Diseñado para crecer</h3>
+            <p data-i18n="publications.moduleBody">Cuando tengas una nueva publicación, solo agrega título, autores, año, revista o conferencia, enlace/DOI y resumen breve en el bloque de datos del archivo. La tarjeta se integrará con el diseño en los tres idiomas.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="future">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <p class="section-kicker" data-i18n="future.kicker">Trabajos futuros</p>
+            <h2 class="section-title" data-i18n="future.title">Líneas futuras para ampliar el portafolio técnico y científico.</h2>
+          </div>
+          <p class="section-copy" data-i18n="future.copy">Esta sección funciona como roadmap profesional: ideas, proyectos en preparación y trabajos que pueden convertirse en publicaciones, prototipos, servicios o estudios de caso.</p>
+        </div>
+        <div class="future-grid" id="future-grid"></div>
+      </div>
+    </section>
+
+    <section id="career">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <p class="section-kicker" data-i18n="career.kicker">Trayectoria</p>
+            <h2 class="section-title" data-i18n="career.title">Experiencia internacional en ingeniería, investigación y modelación.</h2>
+          </div>
+          <p class="section-copy" data-i18n="career.copy">Experiencia en consultoría, laboratorios de hidráulica, universidades y modelación computacional aplicada a ríos, costas, presas y reservorios.</p>
+        </div>
+        <div class="timeline" id="timeline"></div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="wrap two-col">
+        <div class="section-panel card reveal">
+          <p class="section-kicker" data-i18n="education.kicker">Formación</p>
+          <h2 class="section-title" data-i18n="education.title">Base científica y computacional.</h2>
+          <div class="education-list" id="education-list"></div>
+        </div>
+        <div class="section-panel card reveal">
+          <p class="section-kicker" data-i18n="courses.kicker">Cursos y logros</p>
+          <h2 class="section-title" data-i18n="courses.title">Aprendizaje continuo y becas.</h2>
+          <div class="course-list" id="course-list"></div>
+          <div class="achievement-list" id="achievement-list" style="margin-top:14px;"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap two-col">
+        <div class="section-panel card reveal">
+          <p class="section-kicker" data-i18n="skills.kicker">Skills</p>
+          <h2 class="section-title" data-i18n="skills.title">Herramientas y capacidades.</h2>
+          <div id="skills-groups"></div>
+        </div>
+        <div class="section-panel card reveal">
+          <p class="section-kicker" data-i18n="languages.kicker">Idiomas</p>
+          <h2 class="section-title" data-i18n="languages.title">Comunicación técnica multilingüe.</h2>
+          <div class="language-list" id="language-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="cta reveal">
+          <div>
+            <h2 data-i18n="contact.title">Conversemos sobre agua, sedimentos y modelación.</h2>
+            <p data-i18n="contact.copy">Abierta a colaborar en proyectos de hidráulica computacional, transporte de sedimentos, gestión de reservorios, GIS, análisis de datos y estudios costeros o fluviales.</p>
+          </div>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="mailto:ayuquemagaly@gmail.com" data-i18n="contact.email">Enviar email</a>
+            <a class="btn btn--ghost" href="https://www.linkedin.com/in/ayuquemagaly" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div>© <span id="year"></span> Magaly Cusipuma Ayuque.</div>
+      <div data-i18n="footer.refs">Referencias profesionales disponibles a solicitud.</div>
+    </div>
+  </footer>
+
+  <script>
+    const COPY = {
+      es: {
+        meta: {
+          title: "Magaly Cusipuma Ayuque | Ingeniería Hidráulica, CFD y Sedimentos",
+          description: "Portafolio profesional trilingüe de Magaly Cusipuma Ayuque: ingeniería hidráulica, mecánica de fluidos ambiental, CFD, transporte de sedimentos, GIS y análisis de datos."
+        },
+        skip: "Saltar al contenido",
+        brand: { subtitle: "Hidráulica computacional + datos" },
+        nav: {
+          aria: "Navegación principal",
+          menuAria: "Secciones del sitio",
+          actionsAria: "Acciones",
+          themeAria: "Cambiar tema",
+          expertise: "Especialidad",
+          work: "Trabajos",
+          publications: "Publicaciones",
+          future: "Futuro",
+          career: "Trayectoria",
+          contact: "Contacto"
+        },
+        hero: {
+          eyebrow: "Mecánica de fluidos ambiental",
+          titleA: "Modelación hidráulica con visión de",
+          titleB: "impacto.",
+          lead: "Soy <strong>Magaly Cusipuma Ayuque</strong>, ingeniera especializada en hidráulica computacional, transporte de sedimentos, CFD, GIS y análisis de datos para sistemas fluviales, costeros, presas y reservorios.",
+          email: "Contactar por email",
+          cv: "Descargar CV",
+          github: "Ver GitHub",
+          stat1: { title: "Hidrodinámica + sedimentos", body: "Estudios de transporte, erosión, deposición y morfodinámica en ríos, playas y reservorios." },
+          stat2: { title: "CFD, modelos y datos", body: "Validación con mediciones, análisis de sensibilidad, calibración y generación de mallas computacionales." },
+          stat3: { title: "Experiencia internacional", body: "Trayectoria académica y profesional en Francia, Perú y Países Bajos." }
+        },
+        profile: {
+          aria: "Perfil de Magaly Cusipuma Ayuque",
+          role: "Ingeniera en Mecánica de Fluidos | Hidráulica computacional | CFD | Sedimentos",
+          baseLabel: "Base",
+          base: "Francia · Perú",
+          focusLabel: "Foco",
+          focus: "Agua, sedimentos y datos",
+          languagesLabel: "Idiomas",
+          languages: "ES · EN · FR",
+          modeLabel: "Perfil",
+          mode: "Ingeniería + investigación"
+        },
+        expertise: {
+          kicker: "Especialidad",
+          title: "Ingeniería para entender y anticipar el comportamiento del agua.",
+          copy: "Mi trabajo conecta modelación física y numérica con análisis de datos, GIS y herramientas CFD para tomar decisiones técnicas más sólidas en hidráulica, costas, ríos y gestión de reservorios."
+        },
+        work: {
+          kicker: "Trabajos realizados",
+          title: "Proyectos que convierten mediciones, modelos y mapas en decisiones.",
+          copy: "Una selección de trabajos profesionales, investigaciones y experiencias de campo. La sección está preparada para seguir agregando nuevos casos, resultados, enlaces, imágenes o repositorios.",
+          problem: "Contexto",
+          contribution: "Contribución",
+          tools: "Herramientas",
+          filters: { all: "Todo", professional: "Consultoría", research: "Investigación", field: "Campo/Lab", training: "Formación" }
+        },
+        publications: {
+          kicker: "Publicaciones",
+          title: "Producción académica y espacio para nuevas publicaciones.",
+          copy: "Incluye publicaciones ya existentes y bloques listos para manuscritos, conferencias, notas técnicas, DOI, datasets o repositorios futuros.",
+          moduleBadge: "Módulo editable",
+          moduleTitle: "Diseñado para crecer",
+          moduleBody: "Cuando tengas una nueva publicación, solo agrega título, autores, año, revista o conferencia, enlace/DOI y resumen breve en el bloque de datos del archivo. La tarjeta se integrará con el diseño en los tres idiomas.",
+          authors: "Autores",
+          venue: "Fuente",
+          note: "Nota",
+          labels: { published: "Publicado", future: "Futuro", journal: "Artículo", conference: "Conferencia", manuscript: "Manuscrito", technical: "Nota técnica" }
+        },
+        future: {
+          kicker: "Trabajos futuros",
+          title: "Líneas futuras para ampliar el portafolio técnico y científico.",
+          copy: "Esta sección funciona como roadmap profesional: ideas, proyectos en preparación y trabajos que pueden convertirse en publicaciones, prototipos, servicios o estudios de caso.",
+          deliverables: "Posibles entregables"
+        },
+        career: {
+          kicker: "Trayectoria",
+          title: "Experiencia internacional en ingeniería, investigación y modelación.",
+          copy: "Experiencia en consultoría, laboratorios de hidráulica, universidades y modelación computacional aplicada a ríos, costas, presas y reservorios."
+        },
+        education: { kicker: "Formación", title: "Base científica y computacional." },
+        courses: { kicker: "Cursos y logros", title: "Aprendizaje continuo y becas." },
+        skills: { kicker: "Skills", title: "Herramientas y capacidades." },
+        languages: { kicker: "Idiomas", title: "Comunicación técnica multilingüe." },
+        contact: {
+          title: "Conversemos sobre agua, sedimentos y modelación.",
+          copy: "Abierta a colaborar en proyectos de hidráulica computacional, transporte de sedimentos, gestión de reservorios, GIS, análisis de datos y estudios costeros o fluviales.",
+          email: "Enviar email"
+        },
+        footer: { refs: "Referencias profesionales disponibles a solicitud." }
+      },
+      en: {
+        meta: {
+          title: "Magaly Cusipuma Ayuque | Hydraulic Engineering, CFD & Sediment Transport",
+          description: "Trilingual professional portfolio of Magaly Cusipuma Ayuque: hydraulic engineering, environmental fluid mechanics, CFD, sediment transport, GIS and data analysis."
+        },
+        skip: "Skip to content",
+        brand: { subtitle: "Computational hydraulics + data" },
+        nav: {
+          aria: "Main navigation",
+          menuAria: "Site sections",
+          actionsAria: "Actions",
+          themeAria: "Switch theme",
+          expertise: "Expertise",
+          work: "Work",
+          publications: "Publications",
+          future: "Future",
+          career: "Career",
+          contact: "Contact"
+        },
+        hero: {
+          eyebrow: "Environmental fluid mechanics",
+          titleA: "Hydraulic modeling with",
+          titleB: "impact.",
+          lead: "I am <strong>Magaly Cusipuma Ayuque</strong>, an engineer specialized in computational hydraulics, sediment transport, CFD, GIS and data analysis for river, coastal, dam and reservoir systems.",
+          email: "Email me",
+          cv: "Download CV",
+          github: "View GitHub",
+          stat1: { title: "Hydrodynamics + sediments", body: "Transport, erosion, deposition and morphodynamic studies in rivers, beaches and reservoirs." },
+          stat2: { title: "CFD, models and data", body: "Validation with measurements, sensitivity analysis, calibration and computational mesh generation." },
+          stat3: { title: "International experience", body: "Academic and professional background across France, Peru and the Netherlands." }
+        },
+        profile: {
+          aria: "Profile of Magaly Cusipuma Ayuque",
+          role: "Fluid Mechanics Engineer | Computational Hydraulics | CFD | Sediments",
+          baseLabel: "Base",
+          base: "France · Peru",
+          focusLabel: "Focus",
+          focus: "Water, sediments and data",
+          languagesLabel: "Languages",
+          languages: "ES · EN · FR",
+          modeLabel: "Profile",
+          mode: "Engineering + research"
+        },
+        expertise: {
+          kicker: "Expertise",
+          title: "Engineering to understand and anticipate water behavior.",
+          copy: "My work connects physical and numerical modeling with data analysis, GIS and CFD tools to support stronger technical decisions in hydraulics, coasts, rivers and reservoir management."
+        },
+        work: {
+          kicker: "Completed work",
+          title: "Projects that turn measurements, models and maps into decisions.",
+          copy: "A selection of professional work, research and field experience. This section is ready for new case studies, results, links, images or repositories.",
+          problem: "Context",
+          contribution: "Contribution",
+          tools: "Tools",
+          filters: { all: "All", professional: "Consulting", research: "Research", field: "Field/Lab", training: "Training" }
+        },
+        publications: {
+          kicker: "Publications",
+          title: "Academic output and room for new publications.",
+          copy: "Includes existing publications and ready-to-use blocks for manuscripts, conferences, technical notes, DOIs, datasets or future repositories.",
+          moduleBadge: "Editable module",
+          moduleTitle: "Built to grow",
+          moduleBody: "When you have a new publication, add the title, authors, year, journal or conference, link/DOI and a short abstract in the data block. The card will inherit the design in all three languages.",
+          authors: "Authors",
+          venue: "Source",
+          note: "Note",
+          labels: { published: "Published", future: "Future", journal: "Journal", conference: "Conference", manuscript: "Manuscript", technical: "Technical note" }
+        },
+        future: {
+          kicker: "Future work",
+          title: "Future lines to expand the technical and scientific portfolio.",
+          copy: "This section works as a professional roadmap: ideas, projects in preparation and work that may become publications, prototypes, services or case studies.",
+          deliverables: "Potential deliverables"
+        },
+        career: {
+          kicker: "Career",
+          title: "International experience in engineering, research and modeling.",
+          copy: "Experience in consulting, hydraulic laboratories, universities and computational modeling applied to rivers, coasts, dams and reservoirs."
+        },
+        education: { kicker: "Education", title: "Scientific and computational foundation." },
+        courses: { kicker: "Courses and achievements", title: "Continuous learning and scholarships." },
+        skills: { kicker: "Skills", title: "Tools and capabilities." },
+        languages: { kicker: "Languages", title: "Multilingual technical communication." },
+        contact: {
+          title: "Let’s talk about water, sediments and modeling.",
+          copy: "Open to collaborate on computational hydraulics, sediment transport, reservoir management, GIS, data analysis and coastal or river studies.",
+          email: "Send email"
+        },
+        footer: { refs: "Professional references available upon request." }
+      },
+      fr: {
+        meta: {
+          title: "Magaly Cusipuma Ayuque | Ingénierie hydraulique, CFD et transport sédimentaire",
+          description: "Portfolio professionnel trilingue de Magaly Cusipuma Ayuque : ingénierie hydraulique, mécanique des fluides environnementale, CFD, transport sédimentaire, SIG et analyse de données."
+        },
+        skip: "Aller au contenu",
+        brand: { subtitle: "Hydraulique numérique + données" },
+        nav: {
+          aria: "Navigation principale",
+          menuAria: "Sections du site",
+          actionsAria: "Actions",
+          themeAria: "Changer de thème",
+          expertise: "Expertise",
+          work: "Travaux",
+          publications: "Publications",
+          future: "Futur",
+          career: "Parcours",
+          contact: "Contact"
+        },
+        hero: {
+          eyebrow: "Mécanique des fluides environnementale",
+          titleA: "Modélisation hydraulique avec",
+          titleB: "impact.",
+          lead: "Je suis <strong>Magaly Cusipuma Ayuque</strong>, ingénieure spécialisée en hydraulique numérique, transport sédimentaire, CFD, SIG et analyse de données pour les systèmes fluviaux, côtiers, les barrages et les réservoirs.",
+          email: "Me contacter par email",
+          cv: "Télécharger le CV",
+          github: "Voir GitHub",
+          stat1: { title: "Hydrodynamique + sédiments", body: "Études du transport, de l’érosion, du dépôt et de la morphodynamique dans les rivières, plages et réservoirs." },
+          stat2: { title: "CFD, modèles et données", body: "Validation par mesures, analyses de sensibilité, calibration et génération de maillages numériques." },
+          stat3: { title: "Expérience internationale", body: "Parcours académique et professionnel en France, au Pérou et aux Pays-Bas." }
+        },
+        profile: {
+          aria: "Profil de Magaly Cusipuma Ayuque",
+          role: "Ingénieure en mécanique des fluides | Hydraulique numérique | CFD | Sédiments",
+          baseLabel: "Base",
+          base: "France · Pérou",
+          focusLabel: "Focus",
+          focus: "Eau, sédiments et données",
+          languagesLabel: "Langues",
+          languages: "ES · EN · FR",
+          modeLabel: "Profil",
+          mode: "Ingénierie + recherche"
+        },
+        expertise: {
+          kicker: "Expertise",
+          title: "Ingénierie pour comprendre et anticiper le comportement de l’eau.",
+          copy: "Mon travail relie la modélisation physique et numérique à l’analyse de données, aux SIG et aux outils CFD afin d’appuyer des décisions techniques solides en hydraulique, littoral, rivières et gestion de réservoirs."
+        },
+        work: {
+          kicker: "Travaux réalisés",
+          title: "Des projets qui transforment mesures, modèles et cartes en décisions.",
+          copy: "Une sélection de travaux professionnels, de recherches et d’expériences de terrain. Cette section est prête à intégrer de nouveaux cas d’étude, résultats, liens, images ou dépôts.",
+          problem: "Contexte",
+          contribution: "Contribution",
+          tools: "Outils",
+          filters: { all: "Tout", professional: "Conseil", research: "Recherche", field: "Terrain/Labo", training: "Formation" }
+        },
+        publications: {
+          kicker: "Publications",
+          title: "Production académique et espace pour les nouvelles publications.",
+          copy: "Inclut les publications existantes et des blocs prêts à l’emploi pour manuscrits, conférences, notes techniques, DOI, jeux de données ou futurs dépôts.",
+          moduleBadge: "Module éditable",
+          moduleTitle: "Conçu pour évoluer",
+          moduleBody: "Lorsque vous aurez une nouvelle publication, ajoutez le titre, les auteurs, l’année, la revue ou conférence, le lien/DOI et un court résumé dans le bloc de données. La carte s’intégrera au design dans les trois langues.",
+          authors: "Auteurs",
+          venue: "Source",
+          note: "Note",
+          labels: { published: "Publié", future: "Futur", journal: "Article", conference: "Conférence", manuscript: "Manuscrit", technical: "Note technique" }
+        },
+        future: {
+          kicker: "Travaux futurs",
+          title: "Axes futurs pour développer le portfolio technique et scientifique.",
+          copy: "Cette section sert de feuille de route professionnelle : idées, projets en préparation et travaux pouvant devenir publications, prototypes, services ou cas d’étude.",
+          deliverables: "Livrables possibles"
+        },
+        career: {
+          kicker: "Parcours",
+          title: "Expérience internationale en ingénierie, recherche et modélisation.",
+          copy: "Expérience en conseil, laboratoires d’hydraulique, universités et modélisation numérique appliquée aux rivières, littoraux, barrages et réservoirs."
+        },
+        education: { kicker: "Formation", title: "Base scientifique et numérique." },
+        courses: { kicker: "Cours et distinctions", title: "Apprentissage continu et bourses." },
+        skills: { kicker: "Compétences", title: "Outils et capacités." },
+        languages: { kicker: "Langues", title: "Communication technique multilingue." },
+        contact: {
+          title: "Parlons d’eau, de sédiments et de modélisation.",
+          copy: "Ouverte à collaborer sur des projets d’hydraulique numérique, de transport sédimentaire, de gestion de réservoirs, de SIG, d’analyse de données et d’études côtières ou fluviales.",
+          email: "Envoyer un email"
+        },
+        footer: { refs: "Références professionnelles disponibles sur demande." }
+      }
+    };
+
+    const DATA = {
+      expertise: [
+        {
+          icon: "01",
+          title: { es: "Transporte de sedimentos y morfodinámica", en: "Sediment transport and morphodynamics", fr: "Transport sédimentaire et morphodynamique" },
+          body: { es: "Análisis de erosión, deposición, flujo secundario, transporte en suspensión y carga de fondo en sistemas fluviales y costeros.", en: "Analysis of erosion, deposition, secondary flow, suspended transport and bedload in river and coastal systems.", fr: "Analyse de l’érosion, du dépôt, des écoulements secondaires, du transport en suspension et de la charge de fond dans les systèmes fluviaux et côtiers." }
+        },
+        {
+          icon: "02",
+          title: { es: "Hidráulica computacional y CFD", en: "Computational hydraulics and CFD", fr: "Hydraulique numérique et CFD" },
+          body: { es: "Uso de OpenFOAM, TELEMAC, XBeach, Delft3D, FLOW-3D, HEC-RAS y herramientas de mallado para estudiar procesos hidráulicos complejos.", en: "Use of OpenFOAM, TELEMAC, XBeach, Delft3D, FLOW-3D, HEC-RAS and meshing tools to study complex hydraulic processes.", fr: "Utilisation d’OpenFOAM, TELEMAC, XBeach, Delft3D, FLOW-3D, HEC-RAS et d’outils de maillage pour étudier des processus hydrauliques complexes." }
+        },
+        {
+          icon: "03",
+          title: { es: "GIS, teledetección y mapas técnicos", en: "GIS, remote sensing and technical maps", fr: "SIG, télédétection et cartographie technique" },
+          body: { es: "Elaboración de mapas, lectura de imágenes Landsat y análisis espacial para cuencas, drenaje, pendientes, costas y cambios morfológicos.", en: "Map production, Landsat image analysis and spatial analysis for watersheds, drainage, slopes, coasts and morphological change.", fr: "Production de cartes, analyse d’images Landsat et analyse spatiale pour bassins versants, drainage, pentes, littoraux et changements morphologiques." }
+        },
+        {
+          icon: "04",
+          title: { es: "Datos, calibración y validación", en: "Data, calibration and validation", fr: "Données, calibration et validation" },
+          body: { es: "Procesamiento de caudales, velocidades, sedimentos, batimetría y mediciones de laboratorio para validar modelos numéricos y físicos.", en: "Processing of discharge, velocity, sediment, bathymetry and laboratory measurements to validate numerical and physical models.", fr: "Traitement des débits, vitesses, sédiments, bathymétrie et mesures de laboratoire pour valider des modèles numériques et physiques." }
+        }
+      ],
+      works: [
+        {
+          category: "professional",
+          year: "2022",
+          location: "Paris, France",
+          organization: "Tractebel Engineering - ENGIE",
+          title: { es: "Gestión de sedimentos en reservorios y evaluación CFD para presas", en: "Reservoir sediment management and CFD assessment for dams", fr: "Gestion sédimentaire des réservoirs et évaluation CFD pour barrages" },
+          problem: { es: "Estudios de transporte de sedimentos, deposición a largo plazo, flushing y sluicing para apoyar el diseño de presas y la gestión de reservorios.", en: "Sediment transport studies, long-term deposition, flushing and sluicing to support dam design and reservoir management.", fr: "Études de transport sédimentaire, dépôt à long terme, flushing et sluicing pour appuyer la conception de barrages et la gestion de réservoirs." },
+          contribution: { es: "Análisis de caudales, velocidades y sedimentos suspendidos medidos en el río Batang Toru; calibración y validación de modelo numérico; mapas y reporte técnico con GIS.", en: "Analysis of flow rates, velocities and suspended sediments measured in the Batang Toru River; calibration and validation of the numerical model; GIS maps and technical reporting.", fr: "Analyse des débits, vitesses et sédiments en suspension mesurés dans la rivière Batang Toru ; calibration et validation du modèle numérique ; cartes SIG et rapport technique." },
+          tools: ["CFD", "GIS", "Sediment transport", "Reservoir management", "Data analysis"]
+        },
+        {
+          category: "research",
+          year: "2020-2021",
+          location: "Grenoble, France",
+          organization: "Grenoble Alpes University - LEGI",
+          title: { es: "Respuesta de playa de grava y arena ante eventos extremos", en: "Sand and gravel beach response to extreme events", fr: "Réponse d’une plage de sable et galets aux événements extrêmes" },
+          problem: { es: "Evaluar la hidrodinámica y el transporte de sedimentos en una playa del norte de Francia, con foco en la validez del diámetro de partículas para playa de grava.", en: "Assess hydrodynamics and sediment transport on a beach in northern France, with focus on the valid particle diameter range for gravel beaches.", fr: "Évaluer l’hydrodynamique et le transport sédimentaire sur une plage du nord de la France, avec un focus sur la plage de validité du diamètre des particules pour les plages de galets." },
+          contribution: { es: "Simulaciones 1D y 2D con XBeach-G para predecir la respuesta de Hautot-sur-Mer ante eventos extremos y describir cualitativamente procesos de transporte.", en: "1D and 2D simulations with XBeach-G to predict the response of Hautot-sur-Mer to extreme events and qualitatively describe transport processes.", fr: "Simulations 1D et 2D avec XBeach-G pour prédire la réponse de Hautot-sur-Mer aux événements extrêmes et décrire qualitativement les processus de transport." },
+          tools: ["XBeach-G", "Hydrodynamics", "Coastal morphodynamics", "Numerical modeling"]
+        },
+        {
+          category: "professional",
+          year: "2018-2019",
+          location: "Lima, Peru",
+          organization: "DHI",
+          title: { es: "Erosión costera y análisis multianual con imágenes Landsat", en: "Coastal erosion and multiyear Landsat image analysis", fr: "Érosion côtière et analyse multiannuelle d’images Landsat" },
+          problem: { es: "Analizar la erosión de línea de costa afectada por estructuras costeras y apoyar estudios hidráulicos con mapas técnicos.", en: "Analyze coastline erosion affected by coastal structures and support hydraulic studies with technical maps.", fr: "Analyser l’érosion du trait de côte influencée par des ouvrages côtiers et soutenir les études hydrauliques par des cartes techniques." },
+          contribution: { es: "Procesamiento de imágenes Landsat de diferentes años, simulación hidráulica con MIKE 21, mapas de cuencas, drenaje y pendientes, y elaboración de reportes.", en: "Processing of Landsat images from different years, hydraulic simulation with MIKE 21, watershed, drainage and slope maps, and report production.", fr: "Traitement d’images Landsat de différentes années, simulation hydraulique avec MIKE 21, cartes de bassins versants, drainage et pentes, et rédaction de rapports." },
+          tools: ["Landsat", "MIKE 21", "ArcGIS", "QGIS", "Technical reporting"]
+        },
+        {
+          category: "research",
+          year: "2017",
+          location: "Chatou, France",
+          organization: "EDF · Laboratoire d’Hydraulique Saint-Venant",
+          title: { es: "Meandro amazónico: flujo secundario, deformación del lecho y sedimentos", en: "Amazonian meander: secondary flow, bed deformation and sediments", fr: "Méandre amazonien : écoulement secondaire, déformation du lit et sédiments" },
+          problem: { es: "Reproducir la estructura de flujo, la deformación del lecho y el transporte de sedimentos de un tramo curvo de un modelo hidráulico del río Madre de Dios.", en: "Reproduce flow structure, bed deformation and sediment transport in a curved reach of a hydraulic model of the Madre de Dios River.", fr: "Reproduire la structure de l’écoulement, la déformation du lit et le transport sédimentaire dans un tronçon courbe d’un modèle hydraulique de la rivière Madre de Dios." },
+          contribution: { es: "Construcción de malla computacional, organización de batimetría y mediciones, simulaciones 2D/3D, análisis de sensibilidad y comparación con datos de laboratorio.", en: "Computational mesh generation, organization of bathymetry and measurements, 2D/3D simulations, sensitivity analysis and comparison with laboratory data.", fr: "Génération du maillage numérique, organisation de la bathymétrie et des mesures, simulations 2D/3D, analyse de sensibilité et comparaison avec les données de laboratoire." },
+          tools: ["2D/3D modeling", "Mesh generation", "Bathymetry", "Sensitivity analysis", "Lab validation"]
+        },
+        {
+          category: "field",
+          year: "2016-2018",
+          location: "Lima, Peru",
+          organization: "National Hydraulic Laboratory - LNH",
+          title: { es: "Datos de modelo físico: batimetría, ADCP, sedimentos y laboratorio", en: "Physical model data: bathymetry, ADCP, sediments and laboratory work", fr: "Données de modèle physique : bathymétrie, ADCP, sédiments et laboratoire" },
+          problem: { es: "Recolectar información hidráulica y sedimentológica en modelos físicos para análisis de transporte y validación de modelos.", en: "Collect hydraulic and sedimentological information in physical models for transport analysis and model validation.", fr: "Collecter des informations hydrauliques et sédimentologiques dans des modèles physiques pour l’analyse du transport et la validation des modèles." },
+          contribution: { es: "Mediciones de batimetría, transporte en suspensión y carga de fondo, velocidades con ADCP, niveles de agua y análisis de muestras de suelo y sedimento.", en: "Bathymetry measurements, suspended and bedload transport sampling, ADCP velocities, water levels, and analysis of soil and sediment samples.", fr: "Mesures de bathymétrie, échantillonnage du transport en suspension et de la charge de fond, vitesses ADCP, niveaux d’eau et analyses d’échantillons de sol et de sédiments." },
+          tools: ["ADCP", "Bathymetry", "Sediment sampling", "Laboratory analysis"]
+        },
+        {
+          category: "training",
+          year: "2020-2022",
+          location: "Netherlands · Peru",
+          organization: "IHE Delft · R’hydro · National Agrarian University",
+          title: { es: "Hidroinformática, OpenFOAM y machine learning aplicado", en: "Hydroinformatics, OpenFOAM and applied machine learning", fr: "Hydro-informatique, OpenFOAM et machine learning appliqué" },
+          problem: { es: "Ampliar capacidades en modelación hidrológica-fluvial, optimización, inteligencia artificial, OpenFOAM y ciencia de datos para ingeniería del agua.", en: "Expand capabilities in hydrological-river modeling, optimization, artificial intelligence, OpenFOAM and data science for water engineering.", fr: "Renforcer les compétences en modélisation hydrologique et fluviale, optimisation, intelligence artificielle, OpenFOAM et science des données pour l’ingénierie de l’eau." },
+          contribution: { es: "Formulación de problemas de optimización, modelos basados en datos, PCA, clustering, probabilidad, estadística, mallado y validación de estructuras hidráulicas.", en: "Formulation of optimization problems, data-driven models, PCA, clustering, probability, statistics, meshing and validation of hydraulic structures.", fr: "Formulation de problèmes d’optimisation, modèles pilotés par les données, ACP, clustering, probabilité, statistique, maillage et validation d’ouvrages hydrauliques." },
+          tools: ["OpenFOAM", "Python", "Machine Learning", "Weka", "SnappyHexMesh"]
+        }
+      ],
+      publications: [
+        {
+          status: "published",
+          type: "journal",
+          year: "2020",
+          authors: "Cusipuma Ayuque, M.",
+          title: "Assessment of secondary flow using physical and numerical modelling approaches in an Amazonian meander bend.",
+          venue: { es: "Artículo de revista", en: "Journal article", fr: "Article de revue" },
+          note: { es: "Investigación sobre flujo secundario y modelación física-numérica en un meandro amazónico.", en: "Research on secondary flow and physical-numerical modeling in an Amazonian meander bend.", fr: "Recherche sur l’écoulement secondaire et la modélisation physique-numérique d’un méandre amazonien." }
+        },
+        {
+          status: "published",
+          type: "conference",
+          year: "2020",
+          authors: "Montenegro Gambini, J. I., & Cusipuma Ayuque, M.",
+          title: "Assessment of meander hydro-morphodynamics using modelling approaches in an Amazonian river.",
+          venue: { es: "EGU General Assembly Conference Abstracts", en: "EGU General Assembly Conference Abstracts", fr: "EGU General Assembly Conference Abstracts" },
+          note: { es: "Proceeding de conferencia sobre hidromorfodinámica de meandros en un río amazónico.", en: "Conference proceeding on meander hydromorphodynamics in an Amazonian river.", fr: "Acte de conférence sur l’hydromorphodynamique des méandres dans une rivière amazonienne." }
+        },
+        {
+          status: "future",
+          type: "manuscript",
+          year: { es: "Futuro", en: "Future", fr: "Futur" },
+          authors: "Magaly Cusipuma Ayuque",
+          title: { es: "Manuscrito futuro: título, DOI y resumen por agregar", en: "Future manuscript: title, DOI and abstract to be added", fr: "Manuscrit futur : titre, DOI et résumé à ajouter" },
+          venue: { es: "Revista o repositorio por definir", en: "Journal or repository to be defined", fr: "Revue ou dépôt à définir" },
+          note: { es: "Espacio reservado para una publicación en preparación, con posibilidad de agregar enlace, código, dataset y figura destacada.", en: "Reserved space for a publication in preparation, with room for a link, code, dataset and featured figure.", fr: "Espace réservé pour une publication en préparation, avec possibilité d’ajouter lien, code, jeu de données et figure principale." }
+        },
+        {
+          status: "future",
+          type: "technical",
+          year: { es: "Futuro", en: "Future", fr: "Futur" },
+          authors: "Magaly Cusipuma Ayuque",
+          title: { es: "Nota técnica futura: caso de estudio o metodología por agregar", en: "Future technical note: case study or methodology to be added", fr: "Note technique future : cas d’étude ou méthodologie à ajouter" },
+          venue: { es: "Conferencia, blog técnico o informe por definir", en: "Conference, technical blog or report to be defined", fr: "Conférence, blog technique ou rapport à définir" },
+          note: { es: "Bloque listo para comunicar próximos trabajos, resultados preliminares o metodologías reproducibles.", en: "Ready-to-use block for upcoming work, preliminary results or reproducible methodologies.", fr: "Bloc prêt à l’emploi pour présenter des travaux à venir, résultats préliminaires ou méthodologies reproductibles." }
+        }
+      ],
+      future: [
+        {
+          phase: { es: "Idea", en: "Idea", fr: "Idée" },
+          title: { es: "Calibración hidro-sedimentaria asistida por IA", en: "AI-assisted hydro-sedimentary calibration", fr: "Calibration hydro-sédimentaire assistée par IA" },
+          body: { es: "Explorar modelos de datos y asimilación para acelerar la calibración, cuantificar incertidumbre y mejorar la reproducibilidad de simulaciones hidráulicas.", en: "Explore data-driven models and assimilation to accelerate calibration, quantify uncertainty and improve reproducibility in hydraulic simulations.", fr: "Explorer des modèles pilotés par les données et l’assimilation pour accélérer la calibration, quantifier l’incertitude et améliorer la reproductibilité des simulations hydrauliques." },
+          deliverables: ["Notebook", "Dataset", "Technical note"]
+        },
+        {
+          phase: { es: "Plan", en: "Plan", fr: "Plan" },
+          title: { es: "Sedimentación en reservorios y estrategias de manejo", en: "Reservoir sedimentation and management strategies", fr: "Sédimentation des réservoirs et stratégies de gestion" },
+          body: { es: "Profundizar en flushing, sluicing y deposición de largo plazo para apoyar decisiones de operación, diseño y sostenibilidad de infraestructuras hidráulicas.", en: "Deepen work on flushing, sluicing and long-term deposition to support operation, design and sustainability decisions for hydraulic infrastructure.", fr: "Approfondir le flushing, le sluicing et le dépôt à long terme pour appuyer les décisions d’exploitation, de conception et de durabilité des infrastructures hydrauliques." },
+          deliverables: ["Case study", "Model protocol", "Report"]
+        },
+        {
+          phase: { es: "Investigación", en: "Research", fr: "Recherche" },
+          title: { es: "Morfodinámica costera y playas de grava", en: "Coastal morphodynamics and gravel beaches", fr: "Morphodynamique côtière et plages de galets" },
+          body: { es: "Extender trabajos con XBeach-G para evaluar la respuesta de playas ante eventos extremos y comunicar rangos de validez del modelo.", en: "Extend XBeach-G work to assess beach response to extreme events and communicate model validity ranges.", fr: "Étendre les travaux avec XBeach-G pour évaluer la réponse des plages aux événements extrêmes et communiquer les domaines de validité du modèle." },
+          deliverables: ["Manuscript", "Visualization", "Conference"]
+        },
+        {
+          phase: { es: "Portafolio", en: "Portfolio", fr: "Portfolio" },
+          title: { es: "Gemelos digitales GIS + CFD para ríos y costas", en: "GIS + CFD digital twins for rivers and coasts", fr: "Jumeaux numériques SIG + CFD pour rivières et littoraux" },
+          body: { es: "Construir casos demostrativos con mapas, modelos, dashboards y repositorios para mostrar flujo de trabajo completo desde datos hasta decisión.", en: "Build demonstrator cases with maps, models, dashboards and repositories to show the full workflow from data to decision.", fr: "Construire des démonstrateurs avec cartes, modèles, tableaux de bord et dépôts afin de montrer le flux complet des données à la décision." },
+          deliverables: ["Dashboard", "Repository", "Story map"]
+        }
+      ],
+      timeline: [
+        {
+          year: "2022",
+          role: { es: "Ingeniera", en: "Engineer", fr: "Ingénieure" },
+          org: "Tractebel Engineering - ENGIE",
+          place: "Paris, France",
+          period: { es: "Ene 2022 - Ago 2022", en: "Jan 2022 - Aug 2022", fr: "Janv. 2022 - Août 2022" },
+          body: { es: "Estudios de transporte de sedimentos, gestión de reservorios, deposición de largo plazo, análisis de datos del río Batang Toru, GIS y reportes técnicos.", en: "Sediment transport studies, reservoir management, long-term deposition, Batang Toru River data analysis, GIS and technical reports.", fr: "Études de transport sédimentaire, gestion de réservoirs, dépôt à long terme, analyse de données de la rivière Batang Toru, SIG et rapports techniques." }
+        },
+        {
+          year: "2021",
+          role: { es: "Práctica de investigación", en: "Research Internship", fr: "Stage de recherche" },
+          org: "Grenoble Alpes University - LEGI",
+          place: "Grenoble, France",
+          period: { es: "Dic 2020 - Jun 2021", en: "Dec 2020 - Jun 2021", fr: "Déc. 2020 - Juin 2021" },
+          body: { es: "Evaluación de hidrodinámica y transporte de sedimentos en playa de arena y grava con XBeach-G, simulaciones 1D/2D y análisis de eventos extremos.", en: "Assessment of hydrodynamics and sediment transport on sand and gravel beach with XBeach-G, 1D/2D simulations and extreme-event analysis.", fr: "Évaluation de l’hydrodynamique et du transport sédimentaire sur plage de sable et galets avec XBeach-G, simulations 1D/2D et analyse d’événements extrêmes." }
+        },
+        {
+          year: "2019",
+          role: { es: "Ingeniera", en: "Engineer", fr: "Ingénieure" },
+          org: "DHI",
+          place: "Lima, Peru",
+          period: { es: "Oct 2018 - Abr 2019", en: "Oct 2018 - Apr 2019", fr: "Oct. 2018 - Avr. 2019" },
+          body: { es: "Análisis de erosión costera con imágenes Landsat, simulación hidráulica con MIKE 21, mapas GIS y elaboración de reportes.", en: "Coastline erosion analysis with Landsat imagery, hydraulic simulation with MIKE 21, GIS maps and report production.", fr: "Analyse de l’érosion côtière avec images Landsat, simulation hydraulique avec MIKE 21, cartes SIG et rédaction de rapports." }
+        },
+        {
+          year: "2017",
+          role: { es: "Investigadora junior", en: "Junior Researcher", fr: "Chercheuse junior" },
+          org: "EDF · Laboratoire d’Hydraulique Saint-Venant",
+          place: "Chatou, France",
+          period: { es: "Oct 2017 - Dic 2017", en: "Oct 2017 - Dec 2017", fr: "Oct. 2017 - Déc. 2017" },
+          body: { es: "Modelos 2D/3D para flujo, deformación del lecho y sedimentos en un meandro del río Madre de Dios; mallas, sensibilidad y validación con laboratorio.", en: "2D/3D models for flow, bed deformation and sediments in a Madre de Dios River meander; meshing, sensitivity and laboratory validation.", fr: "Modèles 2D/3D pour écoulement, déformation du lit et sédiments dans un méandre de la rivière Madre de Dios ; maillage, sensibilité et validation en laboratoire." }
+        },
+        {
+          year: "2016",
+          role: { es: "Asistente de investigación", en: "Assistant Researcher", fr: "Assistante de recherche" },
+          org: "National Hydraulic Laboratory - LNH",
+          place: "Lima, Peru",
+          period: { es: "Ene 2016 - Sep 2018", en: "Jan 2016 - Sep 2018", fr: "Janv. 2016 - Sept. 2018" },
+          body: { es: "Toma de datos en modelos físicos: batimetría, transporte de sedimentos, ADCP, niveles de agua, muestras de suelo y formación en TELEMAC, OpenFOAM, HEC-RAS y Tecplot.", en: "Physical model data collection: bathymetry, sediment transport, ADCP, water levels, soil samples and training in TELEMAC, OpenFOAM, HEC-RAS and Tecplot.", fr: "Collecte de données en modèles physiques : bathymétrie, transport sédimentaire, ADCP, niveaux d’eau, échantillons de sol et formation à TELEMAC, OpenFOAM, HEC-RAS et Tecplot." }
+        }
+      ],
+      education: [
+        {
+          title: { es: "M.Sc. en Mecánica de Fluidos Ambiental", en: "M.Sc. in Environmental Fluid Mechanics", fr: "M.Sc. en mécanique des fluides environnementale" },
+          org: { es: "Grenoble Alpes University - UGA · Francia", en: "Grenoble Alpes University - UGA · France", fr: "Université Grenoble Alpes - UGA · France" },
+          period: "2020 - 2022",
+          body: { es: "Computación científica, machine learning, asimilación de datos, procesamiento de señales, LDV/PIV, sedimentos, turbulencia e intercambio aire-agua.", en: "Scientific computing, machine learning, data assimilation, signal processing, LDV/PIV, sediments, turbulence and air-water exchange.", fr: "Calcul scientifique, machine learning, assimilation de données, traitement du signal, LDV/PIV, sédiments, turbulence et échanges air-eau." }
+        },
+        {
+          title: { es: "M.Sc. en Hidráulica Computacional", en: "M.Sc. in Computational Hydraulics", fr: "M.Sc. en hydraulique numérique" },
+          org: { es: "Universidad Nacional Mayor de San Marcos · Perú", en: "National University of San Marcos · Peru", fr: "Université Nationale Majeure de San Marcos · Pérou" },
+          period: "2019 - 2020",
+          body: { es: "Especialización orientada a modelación numérica de sistemas hidráulicos y soporte técnico para ingeniería aplicada.", en: "Specialization oriented to numerical modeling of hydraulic systems and technical support for applied engineering.", fr: "Spécialisation orientée vers la modélisation numérique des systèmes hydrauliques et l’appui technique à l’ingénierie appliquée." }
+        },
+        {
+          title: { es: "B.S. en Ingeniería Mecánica de Fluidos", en: "B.S. in Fluid Mechanics Engineering", fr: "Licence en ingénierie mécanique des fluides" },
+          org: { es: "Universidad Nacional Mayor de San Marcos · Perú", en: "National University of San Marcos · Peru", fr: "Université Nationale Majeure de San Marcos · Pérou" },
+          period: "2012 - 2016",
+          body: { es: "Formación base en hidráulica, mecánica de fluidos, mediciones, laboratorio y análisis de sistemas hídricos.", en: "Foundational training in hydraulics, fluid mechanics, measurements, laboratory work and water systems analysis.", fr: "Formation de base en hydraulique, mécanique des fluides, mesures, laboratoire et analyse des systèmes hydriques." }
+        }
+      ],
+      courses: [
+        { title: "Integrated Hydrological and River Modelling", org: "IHE Delft Institute for Water Education", period: "2020", place: { es: "Países Bajos", en: "Netherlands", fr: "Pays-Bas" } },
+        { title: "Hydraulic Modeling with OpenFOAM - Intermediate", org: "R’hydro", period: "2021", place: "Peru" },
+        { title: "Data Science, Machine Learning and Deep Learning with Python", org: "National Agrarian University", period: "2022", place: "Peru" },
+        { title: "Delft Software Days", org: "Deltares", period: "2017", place: { es: "Países Bajos", en: "Netherlands", fr: "Pays-Bas" } },
+        { title: "River Mechanics and Sediment Transport", org: "National Hydraulic Laboratory", period: "2016", place: "Peru" }
+      ],
+      achievements: [
+        { code: "OKP", body: { es: "Beca Orange Knowledge Programme para curso corto en IHE Delft Institute, Países Bajos.", en: "Orange Knowledge Programme scholarship for a short course at IHE Delft Institute, Netherlands.", fr: "Bourse Orange Knowledge Programme pour un cours court à l’IHE Delft Institute, Pays-Bas." } },
+        { code: "PR", body: { es: "Beca PRONABEC de Perú para estudiar una maestría en Grenoble Alpes University.", en: "PRONABEC scholarship from Peru to study a master’s program at Grenoble Alpes University.", fr: "Bourse PRONABEC du Pérou pour étudier un master à l’Université Grenoble Alpes." } },
+        { code: "★", body: { es: "Diploma de estudiante destacada durante el pregrado.", en: "Outstanding student diploma during undergraduate studies.", fr: "Diplôme d’étudiante remarquable pendant la licence." } }
+      ],
+      skills: [
+        { label: { es: "Modelación hidráulica", en: "Hydraulic modeling", fr: "Modélisation hydraulique" }, items: ["OpenFOAM", "Open TELEMAC", "HEC-RAS", "MIKE 21", "XBeach", "Delft3D", "FLOW-3D", "Civil 3D"] },
+        { label: { es: "Datos y programación", en: "Data and programming", fr: "Données et programmation" }, items: ["Python", "R", "Matlab", "Machine Learning", "PCA", "K-Means", "Statistics", "Data mining"] },
+        { label: { es: "GIS y comunicación técnica", en: "GIS and technical communication", fr: "SIG et communication technique" }, items: ["ArcGIS", "QGIS", "Landsat", "LaTeX", "Technical reports", "Project management"] }
+      ],
+      languages: [
+        { label: { es: "Español", en: "Spanish", fr: "Espagnol" }, level: "5/5", value: 100 },
+        { label: { es: "Inglés", en: "English", fr: "Anglais" }, level: "4.5/5", value: 90 },
+        { label: { es: "Francés", en: "French", fr: "Français" }, level: "1.5/5", value: 30 },
+        { label: { es: "Holandés", en: "Dutch", fr: "Néerlandais" }, level: "0.5/5", value: 10 }
+      ]
+    };
+
+    const state = {
+      lang: localStorage.getItem("language") || "es",
+      filter: "all"
+    };
+    if (!COPY[state.lang]) state.lang = "es";
+
+    const $ = (selector, scope = document) => scope.querySelector(selector);
+    const $$ = (selector, scope = document) => Array.from(scope.querySelectorAll(selector));
+
+    function getPath(object, path) {
+      return path.split(".").reduce((acc, key) => acc && acc[key], object);
+    }
+
+    function copy(path) {
+      return getPath(COPY[state.lang], path) ?? getPath(COPY.es, path) ?? "";
+    }
+
+    function localize(value) {
+      if (value && typeof value === "object" && !Array.isArray(value)) {
+        return value[state.lang] ?? value.es ?? value.en ?? value.fr ?? "";
+      }
+      return value ?? "";
+    }
+
+    function escapeHTML(value) {
+      return String(value).replace(/[&<>'"]/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" }[char]));
+    }
+
+    function translateStatic() {
+      document.documentElement.lang = state.lang;
+      document.title = copy("meta.title");
+      const desc = document.querySelector('meta[name="description"]');
+      if (desc) desc.content = copy("meta.description");
+
+      $$('[data-i18n]').forEach(el => { el.innerHTML = copy(el.dataset.i18n); });
+      $$('[data-i18n-aria]').forEach(el => { el.setAttribute('aria-label', copy(el.dataset.i18nAria)); });
+      $$('[data-set-lang]').forEach(btn => btn.classList.toggle('is-active', btn.dataset.setLang === state.lang));
+      localStorage.setItem("language", state.lang);
+    }
+
+    function cardTemplate(item) {
+      return `
+        <article class="card reveal">
+          <div class="card__icon">${escapeHTML(item.icon)}</div>
+          <h3>${escapeHTML(localize(item.title))}</h3>
+          <p>${escapeHTML(localize(item.body))}</p>
+        </article>
+      `;
+    }
+
+    function renderExpertise() {
+      $('#expertise-grid').innerHTML = DATA.expertise.map(cardTemplate).join('');
+    }
+
+    function renderFilters() {
+      const filters = ["all", "professional", "research", "field", "training"];
+      $('#work-filters').innerHTML = filters.map(key => `
+        <button class="filter-btn ${state.filter === key ? 'is-active' : ''}" type="button" data-filter="${key}">${escapeHTML(copy(`work.filters.${key}`))}</button>
+      `).join('');
+      $$('[data-filter]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          state.filter = btn.dataset.filter;
+          renderWork();
+        });
+      });
+    }
+
+    function renderWork() {
+      renderFilters();
+      const items = DATA.works.filter(item => state.filter === "all" || item.category === state.filter);
+      $('#work-grid').innerHTML = items.map(item => `
+        <article class="card work-card reveal">
+          <div class="work-card__top">
+            <div class="work-card__meta">
+              <span class="badge badge--accent">${escapeHTML(item.year)}</span>
+              <span class="badge">${escapeHTML(copy(`work.filters.${item.category}`))}</span>
+              <span class="badge">${escapeHTML(item.location)}</span>
+            </div>
+            <h3>${escapeHTML(localize(item.title))}</h3>
+            <div class="work-card__org">${escapeHTML(item.organization)}</div>
+          </div>
+          <div class="work-card__body">
+            <p><span class="label">${escapeHTML(copy("work.problem"))}</span>${escapeHTML(localize(item.problem))}</p>
+            <p><span class="label">${escapeHTML(copy("work.contribution"))}</span>${escapeHTML(localize(item.contribution))}</p>
+            <div>
+              <span class="label">${escapeHTML(copy("work.tools"))}</span>
+              <div class="tag-row">${item.tools.map(tool => `<span class="tag">${escapeHTML(tool)}</span>`).join('')}</div>
+            </div>
+          </div>
+        </article>
+      `).join('');
+      observeReveals();
+    }
+
+    function renderPublications() {
+      $('#publication-list').innerHTML = DATA.publications.map(item => {
+        const isFuture = item.status === "future";
+        return `
+          <article class="pub-card reveal">
+            <div class="work-card__meta">
+              <span class="badge ${isFuture ? 'badge--future' : 'badge--accent'}">${escapeHTML(localize(item.year))}</span>
+              <span class="badge">${escapeHTML(copy(`publications.labels.${item.status}`))}</span>
+              <span class="badge">${escapeHTML(copy(`publications.labels.${item.type}`))}</span>
+            </div>
+            <h3><em>${escapeHTML(localize(item.title))}</em></h3>
+            <p><span class="label">${escapeHTML(copy("publications.authors"))}</span>${escapeHTML(item.authors)}</p>
+            <p><span class="label">${escapeHTML(copy("publications.venue"))}</span>${escapeHTML(localize(item.venue))}</p>
+            <p><span class="label">${escapeHTML(copy("publications.note"))}</span>${escapeHTML(localize(item.note))}</p>
+          </article>
+        `;
+      }).join('');
+    }
+
+    function renderFuture() {
+      $('#future-grid').innerHTML = DATA.future.map((item, index) => `
+        <article class="card future-card reveal">
+          <div class="card__icon">${String(index + 1).padStart(2, '0')}</div>
+          <span class="badge badge--future">${escapeHTML(localize(item.phase))}</span>
+          <h3 style="margin-top:16px;">${escapeHTML(localize(item.title))}</h3>
+          <p>${escapeHTML(localize(item.body))}</p>
+          <div style="margin-top:16px;">
+            <span class="label">${escapeHTML(copy("future.deliverables"))}</span>
+            <div class="tag-row">${item.deliverables.map(deliverable => `<span class="tag">${escapeHTML(deliverable)}</span>`).join('')}</div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function renderTimeline() {
+      $('#timeline').innerHTML = DATA.timeline.map(item => `
+        <article class="timeline-item reveal">
+          <div class="timeline-dot">${escapeHTML(item.year)}</div>
+          <div class="timeline-content">
+            <h3>${escapeHTML(localize(item.role))}</h3>
+            <p class="company">${escapeHTML(item.org)}</p>
+            <p class="meta">${escapeHTML(localize(item.period))} · ${escapeHTML(item.place)}</p>
+            <p>${escapeHTML(localize(item.body))}</p>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function renderEducation() {
+      $('#education-list').innerHTML = DATA.education.map(item => `
+        <article class="compact-card reveal">
+          <h3>${escapeHTML(localize(item.title))}</h3>
+          <p class="company">${escapeHTML(localize(item.org))}</p>
+          <p>${escapeHTML(localize(item.body))}</p>
+          <div class="meta">${escapeHTML(item.period)}</div>
+        </article>
+      `).join('');
+    }
+
+    function renderCourses() {
+      $('#course-list').innerHTML = DATA.courses.map(item => `
+        <article class="compact-card reveal">
+          <h3>${escapeHTML(item.title)}</h3>
+          <p>${escapeHTML(item.org)} · ${escapeHTML(localize(item.place))}</p>
+          <div class="meta">${escapeHTML(item.period)}</div>
+        </article>
+      `).join('');
+      $('#achievement-list').innerHTML = DATA.achievements.map(item => `
+        <article class="compact-card reveal">
+          <span class="badge badge--accent">${escapeHTML(item.code)}</span>
+          <p style="margin-top:10px;">${escapeHTML(localize(item.body))}</p>
+        </article>
+      `).join('');
+    }
+
+    function renderSkills() {
+      $('#skills-groups').innerHTML = DATA.skills.map(group => `
+        <div class="compact-card reveal" style="margin-top:14px;">
+          <h3>${escapeHTML(localize(group.label))}</h3>
+          <div class="skill-cloud">${group.items.map(skill => `<span class="tag">${escapeHTML(skill)}</span>`).join('')}</div>
+        </div>
+      `).join('');
+      $('#language-list').innerHTML = DATA.languages.map(item => `
+        <div class="language reveal">
+          <strong>${escapeHTML(localize(item.label))}</strong>
+          <div class="meter"><span style="width:${item.value}%"></span></div>
+          <strong>${escapeHTML(item.level)}</strong>
+        </div>
+      `).join('');
+    }
+
+    let revealObserver;
+    function observeReveals() {
+      if (!('IntersectionObserver' in window)) {
+        $$('.reveal').forEach(el => el.classList.add('is-visible'));
+        return;
+      }
+      if (!revealObserver) {
+        revealObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.11 });
+      }
+      $$('.reveal:not(.is-visible)').forEach(el => revealObserver.observe(el));
+    }
+
+    function renderAll() {
+      translateStatic();
+      renderExpertise();
+      renderWork();
+      renderPublications();
+      renderFuture();
+      renderTimeline();
+      renderEducation();
+      renderCourses();
+      renderSkills();
+      observeReveals();
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const menuToggle = $('#menu-toggle');
+    const menu = $('#site-menu');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('is-open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    $$('.nav__links a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    $('#theme-toggle').addEventListener('click', () => {
+      document.body.classList.toggle('light');
+      localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
+    });
+
+    if (localStorage.getItem('theme') === 'light') document.body.classList.add('light');
+
+    $$('[data-set-lang]').forEach(button => {
+      button.addEventListener('click', () => {
+        state.lang = button.dataset.setLang;
+        renderAll();
+      });
+    });
+
+    const activeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const id = entry.target.getAttribute('id');
+        $$('.nav__links a').forEach(link => {
+          link.classList.toggle('is-active', link.getAttribute('href') === `#${id}`);
+        });
+      });
+    }, { rootMargin: '-35% 0px -52% 0px', threshold: 0.01 });
+
+    $$('main section[id]').forEach(section => activeObserver.observe(section));
+
+    renderAll();
+  </script>
 </body>
 </html>
